@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import FormularioTareas from './Components/FormularioTareas';
 import ListaTareas from './Components/ListaTareas'
+import Quote from './Components/Quote';
 
 const App = () => {
   // Obtenemos las tareas guardadas de localstorage.
@@ -39,12 +40,17 @@ const App = () => {
         mostrarCompletadas={mostrarCompletadas} 
         cambiarMostrarCompletadas={cambiarMostrarCompletadas}
       />
-      <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas} />
+      <FormularioTareas 
+      tareas={tareas} 
+      cambiarTareas={cambiarTareas} 
+
+      />
       <ListaTareas 
         tareas={tareas}
         cambiarTareas={cambiarTareas}
         mostrarCompletadas={mostrarCompletadas}
       />
+      <Quote />
     </div>
   );
 }

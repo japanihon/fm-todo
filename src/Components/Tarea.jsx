@@ -2,9 +2,15 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCheckSquare, faEdit, faSquare, faTimes} from '@fortawesome/free-solid-svg-icons';
 
+// Es importante entender que Tarea es un objetos con propiedades, entonces podemos
+// acceder a ese objeto accediendo a sus propiedades, por ejemplo -> (tarea.texto);
+// es el texto que se escribe en la tarea, todo se basa en el objeto principal
+
 const Tarea = ({tarea, toggleCompletada, editarTarea, borrarTarea}) => {
 	const [editandoTarea, cambiarEditandoTarea] = useState(false);
 	const [nuevaTarea, cambiarNuevaTarea] = useState(tarea.texto);
+
+// Funcion que envia la tarea una vez modificada
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -32,7 +38,7 @@ const Tarea = ({tarea, toggleCompletada, editarTarea, borrarTarea}) => {
 						type="submit" 
 						className="formulario-editar-tarea__btn"
 					>
-						Actualizar
+						Update Task
 					</button>
 				</form>
 				: tarea.texto

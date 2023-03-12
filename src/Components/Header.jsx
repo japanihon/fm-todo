@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEyeSlash, faEye} from '@fortawesome/free-solid-svg-icons';
 
+// Los 2 argumentos de Header son los que se usan como props en la APP principal
+
 const Header = ({mostrarCompletadas, cambiarMostrarCompletadas}) => {
 	const toggleCompletadas = () => {
 		cambiarMostrarCompletadas(!mostrarCompletadas);
@@ -9,13 +11,13 @@ const Header = ({mostrarCompletadas, cambiarMostrarCompletadas}) => {
 
 	return (
 		<header className="header">
-			<h1 className="header__titulo">Lista de Tareas</h1>
+			<h1 className="header__titulo"> Task List </h1>
 			{mostrarCompletadas ?
 				<button 
 					className="header__boton"
 					onClick={() => toggleCompletadas()}
 				>
-					No mostrar completadas
+					Finished Tasks
 					<FontAwesomeIcon icon={faEyeSlash} className="header__icono-boton" />
 				</button>
 			:
@@ -23,7 +25,7 @@ const Header = ({mostrarCompletadas, cambiarMostrarCompletadas}) => {
 					className="header__boton"
 					onClick={() => toggleCompletadas()}
 				>
-					Mostrar completadas
+					Task in Progress
 					<FontAwesomeIcon icon={faEye} className="header__icono-boton" />
 				</button>
 			}

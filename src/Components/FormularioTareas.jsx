@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlusSquare} from '@fortawesome/free-solid-svg-icons';
 
 
-// Es decir que tares / cambiarTareas que son los argumentos de Formulario tareas, se
+// Es decir que tareas / cambiarTareas que son los argumentos de Formulario tareas, se
 // asocian con el estado principal mediante las custom props
 
 const FormularioTareas = ({tareas, cambiarTareas}) => {
@@ -50,7 +50,7 @@ const FormularioTareas = ({tareas, cambiarTareas}) => {
 			<input
 				type="text"
 				className="formulario-tareas__input"
-				placeholder="Escribe una tarea"
+				placeholder="Write something here"
 				value={inputTarea}
 				onChange={(e) => handleInput(e)}
 			/>
